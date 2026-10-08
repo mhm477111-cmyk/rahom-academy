@@ -188,14 +188,14 @@ footer{font-size:12.5px}
 
 <script>
 // ===== إعدادات سريعة: غيّر السطور دي بس =====
-const CONFIG={devName:"محمد إبراهيم",devPhone:"01282608730",apkUrl:"Rahom-Academy.apk"};
+const CONFIG={devName:"محمد إبراهيم",devPhone:"01282608730",apkUrl:"https://github.com/mhm477111-cmyk/rahom-academy/releases/download/v1/Rahom-Academy.apk"};
 // =============================================
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 $('#devName').textContent=CONFIG.devName;$('#devPhone').textContent=CONFIG.devPhone;
 const intl='20'+CONFIG.devPhone.replace(/^0/,'').replace(/\D/g,'');
 $('#devCall').href='https://wa.me/'+intl;
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
-$$('.dl').forEach(a=>{a.href=CONFIG.apkUrl;a.setAttribute('download','رحوم اكاديمي.apk');a.onclick=e=>{if(CONFIG.apkUrl==='#'){e.preventDefault();toast('رابط التحميل هيتفعّل قريبًا 🚀')}}});
+$$('.dl').forEach(a=>{a.href=CONFIG.apkUrl;a.onclick=e=>{if(CONFIG.apkUrl==='#'){e.preventDefault();toast('رابط التحميل هيتفعّل قريبًا 🚀')}}});
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
 $$('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%3)*.1+'s';io.observe(e)});
